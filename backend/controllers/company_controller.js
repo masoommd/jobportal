@@ -113,7 +113,7 @@ export const updateCompany = async (req, res) => {
 export const deleteCompany = async (req, res) => {
   try {
     const { id } = req.params;
-    const deletecompnay = await Job.findByIdAndDelete(id);
+    const deletecompnay = await Company.findByIdAndDelete(id);
 
     if (!deletecompnay) {
       return res.status(404).json({
